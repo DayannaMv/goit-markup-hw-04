@@ -2,8 +2,9 @@
 :root {
   --color-primario: rgb(33, 150, 243);
   --color-rectangle: rgb(47, 48, 58);
-  --color-gray:rgb(245, 244, 250);
+  --color-gray: rgb(245, 244, 250);
   --color-gray2: rgb(175, 177, 184);
+  --color-primary-gray: #757575;
 }
 
 /* ---- ---- ---- LISTAS SIN PUNTOS ---- ---- ----*/
@@ -11,123 +12,81 @@ ul {
   list-style-type: none;
 }
 /* ---- ---- ---- HEADER ---- ---- ----*/
-.header {
-  width: 1500px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 80px;
+  padding: 0;
 }
-a.link-header {
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+header nav .logo {
   color: var(--color-primario);
-  font-family: Raleway;
-  font-weight: 700;
+  font-family: "Raleway", sans-serif;
   font-size: 26px;
-  line-height: 1.1;
-  text-align: right;
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  line-height: 1.2;
   text-decoration: none;
-  position: absolute;
-  width: 145px;
-  height: 31px;
-  left: 215px;
-  top: 24px;
-}
-.studio {
-  color: black;
-  text-decoration: none;
-  position: absolute;
-  width: 49px;
-  height: 16px;
-  left: 453px;
-  top: 32px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-}
-.studio:hover,
-.studio:active {
-  color: var(--color-primario);
+  padding-left: 215px;
 }
 
-.portfolio {
-  color: black;
+header nav .menu {
+  display: flex;
+  list-style: none;
+  gap: 80px;
+}
+
+header nav .menu .page {
+  color: #212121;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.4;
+
   letter-spacing: 0.02em;
   text-decoration: none;
-  position: absolute;
-  width: 65px;
-  height: 16px;
-  left: 552px;
-  top: 32px;
-}
-.portfolio:hover,
-.portfolio:active {
-  color: var(--color-primario);
+  text-transform: capitalize;
 }
 
-.contact {
-  color: black;
+.menu-contacts {
+  display: flex;
+  list-style: none;
+  gap: 80px;
+  padding-right: 219px;
+}
+.menu-contacts .item {
+  color: var(--color-primary-gray);
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.1;
+  line-height: 1.4;
   letter-spacing: 0.02em;
   text-decoration: none;
-  position: absolute;
-  width: 67px;
-  height: 16px;
-  left: 667px;
-  top: 32px;
+  align-items: center;
+  gap: 5px;
+  display: flex;
 }
-.contact:hover,
-.contact:active {
+.menu-contacts .item:hover {
+  fill: var(--color-primario);
+}
+
+.menu .page:hover,
+.menu .page:focus,
+.menu-contacts .item:hover,
+.menu-contacts .item:focus {
   color: var(--color-primario);
 }
-
-.email {
-  color: #757575;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
-  position: absolute;
-  width: 135px;
-  height: 16px;
-  left: 1078px;
-  top: 32px;
-  text-decoration: none;
-}
-
-.email:hover,
-.email:active {
-  color: var(--color-primario);
-}
-
-.number {
-  color: #757575;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
-  text-decoration: none;
-  position: absolute;
-  width: 118px;
-  height: 16px;
-  left: 1263px;
-  top: 32px;
-  letter-spacing: 0em;
-}
-.number:hover,
-.number:active {
-  color: var(--color-primario);
-}
-
 /* ---- ---- ---- MAIN ---- ---- ----*/
 
 .main {
   background-color: var(--color-rectangle);
   width: 1600px;
   height: 600px;
-  background-image: url("../images/background_image.jpg");
+  background: linear-gradient(#2f303a66, #2f303a66),
+    url("../images/background_image.jpg");
 }
 
 body {
@@ -194,7 +153,6 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  
 }
 
 .container .card-set {
@@ -213,7 +171,6 @@ body {
   background-color: var(--color-gray);
   border-radius: 4px;
   margin-bottom: 30px;
-  
 }
 .card-set h5 {
   width: 270px;
@@ -251,14 +208,13 @@ body {
   overflow: hidden;
   margin: 6.5px;
   text-align: center;
-  
 }
 /* ---- ---- ---- EQUIPO DE TRABAJO ---- ---- ----*/
 
 .section-four {
   width: 1600px;
   height: 708px;
-  background-color: #F5F4FA;;
+  background-color: #f5f4fa;
 }
 
 .sub-two {
@@ -271,7 +227,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.container .cards {
+.team-section .container .cards {
   background: #ffffff;
   width: 270px;
   height: 428px;
@@ -297,23 +253,42 @@ body {
   color: #757575;
 }
 
-.container .team-icons {
-  fill: var(--color-gray2);
+/* ---- icons ----*/
+
+.team-section .container .team-cards li ul{
+  display: flex;
+  gap: 15px;
+}
+
+.team-section .container li ul li {
   display: block;
   width: 44px;
   height: 44px;
-  border-radius: 25px; 
-  display: flex; 
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin: 10px;
+  /* margin: 10px;
   margin-left: 0;
-  padding-right: 21px;
+  padding-right: 21px; */
+}
+.team-icons svg {
+  width: 20px;
+  
+  }
+.team-icons svg {
+  fill: var(--color-gray2);
 }
 
-.team-icons:hover {
-  background-color: var(--color-primario);
+.team-icons:hover svg path{
   fill: #ffffff;
 }
+.team-icons:hover {
+  background-color: var(--color-primario);
+  border-radius: 25px;
+}
+
+
+
 
 /* ---- ---- ---- CLIENTES ---- ---- ----*/
 
@@ -336,13 +311,12 @@ body {
   height: 81px;
   border-radius: 4px;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   border-radius: 4px;
 }
 .logos:hover {
   fill: var(--color-primario);
   border: 1px solid var(--color-primario);
-
 }
 
 /* ---- ---- ---- FOOTER ---- ---- ----*/
@@ -375,7 +349,7 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .mailto {
@@ -405,7 +379,15 @@ body {
 .tel:active {
   color: var(--color-primario);
 }
-.paragraph-footer {
+
+.section-five {
+  background: var(--color-rectangle);
+  width: 1600px;
+  height: 252px;
+  margin-top: 2062px;
+}
+
+.container .paragraph-footer {
   margin-top: 80px;
   position: absolute;
   width: 135px;
@@ -419,9 +401,26 @@ body {
   color: #ffffff;
 }
 
-.section-five {
-  background: var(--color-rectangle);
-  width: 1600px;
-  height: 252px;
-  margin-top: 2062px;
+/* .container .footer-icons {
+  fill: #ffffff;
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 25px; 
+  display: flex; 
+  justify-content: center;
+  padding-right: 21px;
+  padding-top: 110px;
+  padding-left: 20px;
+} */
+
+.redes {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes ul li {
 }

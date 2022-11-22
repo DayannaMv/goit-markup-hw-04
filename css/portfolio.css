@@ -58,7 +58,7 @@ body {
 
 .container .card {
   width: 370px;
-  height: auto;
+  height: 430px;
   border: 1px solid #eeeeee;
   overflow: hidden;
   margin: 5px;
@@ -153,5 +153,5 @@ body {
   background: var(--color-rectangle);
   width: 1600px;
   height: 252px;
-  margin-top: 1700px;
+  margin-top: 1600px;
 }
