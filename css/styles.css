@@ -275,12 +275,14 @@ header {
 }
 .team-section .container .team-cards li p {
   margin-bottom: 30px;
+  font-size: 16px;
 }
 
 /* ---- icons ----*/
 .team-section .container .team-cards li ul {
   display: flex;
-  gap: 15px;
+  gap: 7px;
+  margin-left: 20px;
 }
 .team-section .container .team-cards li ul li {
   display: block;
@@ -312,6 +314,8 @@ header {
   align-items: center;
   justify-content:center;
   flex-wrap: wrap;
+  text-align: center;
+  
 }
 .section-logos .item-logos .logos {
   list-style: none;
@@ -323,9 +327,8 @@ header {
   width: 170px;
   height: 81px;
 }
-.section-logos .item-logos .logos svg path{
-align-content: center;
-align-items: center;
+.section-logos .item-logos .logos svg{
+margin-top: 15px;
 }
 .section-logos .item-logos .logos:hover {
   border: 1px solid var(--accent-color);
@@ -335,29 +338,11 @@ align-items: center;
   color: var(--primary-black-color);
   font-size: 36px;
   font-weight: 700px;
-  /* padding: 30px 0; */
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* .container .logos {
-  display: flex;
-  margin-left: 15px;
-  margin-right: 15px;
-  border: 1px solid var(--color-gray2);
-  width: 170px;
-  height: 81px;
-  border-radius: 4px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-}
-.logos:hover {
-  fill: var(--color-primario);
-  border: 1px solid var(--color-primario);
-} */
-
-/*----------- Portfolio section -----------*/
+/*----------- Portafolio section -----------*/
 .portfolio .menu {
   display: flex;
   align-items: center;
@@ -379,6 +364,8 @@ align-items: center;
 
   text-decoration: none;
   text-transform: capitalize;
+  background: #F5F4FA;
+  border-radius: 4px;
 }
 
 .portfolio .cards {
@@ -414,11 +401,11 @@ align-items: center;
   padding: 15px;
 }
 
-.portfolio .menu li button:hover,
-.portfolio .menu li button.current {
+.portfolio .menu li button:hover  {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*----------- footer section ----------- */
 footer {
@@ -429,6 +416,7 @@ footer {
 }
 footer .container address ul {
   list-style: none;
+  margin-top: 6px;
 }
 footer .container address .direction {
   color: #ffffff;
@@ -453,13 +441,20 @@ footer .container address .contact {
 footer .container address .contact:hover {
   color: var(--primary-white-color);
 }
-
+/* icons footer */
 .container .footer-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
+  width: 300px;
+
+  position: absolute;
+  width: 206px;
+  height: 80px;
+  left: 516px;
+  top: 2899px;
 }
 
 .container .footer-icons .icons {
@@ -480,12 +475,42 @@ background-color: var(--accent-color);
 .container .footer-icons .icons svg{
 fill: #ffffff;
 }
-.container .footer-icons p {
+footer .paragraph-footer {
+position: absolute;
+top: 2888px;
+right: 930px;
 font-weight: 700;
 font-size: 14px;
 line-height: 16px;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #ffffff;
-/* margin-bottom: 100px; */
 }
+
+.container .footer-icons-two {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+
+  position: absolute;
+  width: 206px;
+  height: 80px;
+  left: 516px;
+  top: 1795px;
+}
+
+footer .paragraph-footer-two {
+  position: absolute;
+  top: 1781px;
+  right: 930px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  /* margin-bottom: 100px; */
+  }
