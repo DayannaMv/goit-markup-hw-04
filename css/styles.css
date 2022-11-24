@@ -333,6 +333,9 @@ margin-top: 15px;
 .section-logos .item-logos .logos:hover {
   border: 1px solid var(--accent-color);
 }
+.section-logos .item-logos .logos:hover svg path{
+  fill: var(--accent-color);
+}
 
 .section-logos h2 {
   color: var(--primary-black-color);
